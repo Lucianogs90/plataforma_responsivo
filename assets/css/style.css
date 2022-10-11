@@ -48,7 +48,7 @@
   display: flex;
 }
 .acessibilidade a {
-  color: var(--menu-background);
+  color: var(--text-color);
   text-decoration: none;
   margin: 0 10px;
 }
@@ -98,7 +98,15 @@
 }
 
 /* Classe auxiliar */
-/* TODO: adicionar transição */
+@keyframes menuAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .show {
   display: block;
   position: fixed;
@@ -108,6 +116,7 @@
   height: 100%;
   z-index: 999;
   background-color: var(--color-primary);
+  animation: menuAnimation 2s;
 }
 
 .show > ul {
